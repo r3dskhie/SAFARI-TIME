@@ -1,0 +1,2 @@
+# SAFARI-TIME
+All in one hunter at KANTO, JOHTO, HOENN SAFARI!
