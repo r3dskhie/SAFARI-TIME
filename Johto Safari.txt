@@ -1,8 +1,8 @@
 
 
-						 -- Copyright © 2016 redskhie
+						 -- Copyright Â© 2016 redskhie
 
-
+			--NOTE: YOU NEED ITEM "Escape Rope" in order to heal your fainted Pokes when in the Hunting Area
 
 huntandFarm = false		--set to true if you want to kill all encountered pokes else false
 catchUncaught = true		--set to true if you want to catch uncaught pokes else false
@@ -106,7 +106,7 @@ mountSwitch = true
 		--WARNING!!! DO NOT TOUCH THE CODES BELOW!!!
 
 
-					 -- Copyright © 2016 redskhie
+					 -- Copyright Â© 2016 redskhie
 
 	local GrassSwampList = {"Abra", "Chansey", "Chikorita", "Ducklett", "Gastly", "Girafarig", "Haunter", "Lickitung", "Mr Mime", "Murkrow", "Oddish", "Politoed", "Psyduck", "Seedot", "Skiploom", "Smeargle", "Sunkern", "Surskit", "Wooper"}
 	local GrassSwampSurfList = {"Ducklett", "Horsea", "Krabby", "Magikarp" , "Marill", "Poliwag", "Poliwhirl"}
@@ -118,7 +118,7 @@ mountSwitch = true
 	local WetSurfList = {"Goldeen", "Horsea", "Totodile"}
 	local WetFishList = {"Chinchou", "Corphish", "Feebas", "Magikarp", "Remoraid", "Staryu"}
 		
-					 -- Copyright © 2016 redskhie
+					 -- Copyright Â© 2016 redskhie
 
 
 name = "All in One Catcher at Johto Safari"
