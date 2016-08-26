@@ -12,7 +12,7 @@ catchShiny = true		--set to true if you want to catch encountered shiny's else f
 						-- CATCH CONFIGURATION --CASE INSENSITIVE
 			--SINGLE CATCHING
 
-singleCatch = true		--Set to true if you want to catch only 1 Pokes and set multipleCatch to false
+singleCatch = false		--Set to true if you want to catch only 1 Pokes and set multipleCatch to false
 	
 toHunt = "Feebas"		--Set/Change the name of Pokemon you want to Catch     
 huntMap = "Wet"		--Set/Change the Map Area of the Pokemon    --OPTIONS: "GrassandSwamp", "Mountain", "Snow", "Wet"
@@ -21,7 +21,7 @@ huntMap = "Wet"		--Set/Change the Map Area of the Pokemon    --OPTIONS: "Grassan
 
 			--MULTIPLE CATCHING
 
-multipleCatch = false		--Set to true if you want to catch multiple Pokes at Different Time and set singleCatch to false
+multipleCatch = true		--Set to true if you want to catch multiple Pokes at Different Time and set singleCatch to false
 
 				--NOTE: PLEASE PROPERLY ARRANGE THE TEAM ACCORDING TO YOUR INPUT CONFIG before START SCRIPT
 
