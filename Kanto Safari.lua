@@ -155,7 +155,7 @@ function onStart()
     starlycounter = 0
     pokecenterCounter = 0
     wildCounter = 0
-    moneyneeded = maxmoney - minmoney
+    
     startingMoney = getMoney()
 
     log("-----------------------------------------------------------")
@@ -477,9 +477,8 @@ function onPathAction()
         log("---------------------------")
                 return useItem(mount)
 
-    elseif moneyfarm and (getMoney() <= minmoney or ((getMoney() - startingMoney) < moneyneeded) ) then
+    elseif moneyfarm and (getMoney() >= minmoney and getMoney() <= maxmoney)  then
         log("~~~ Grinding some pokedollars!!! ~~~")
-        moneyneeded = moneyneeded + (getMoney() - startingMoney)
         if cCave then
             ceCave()
         elseif sFoam then
