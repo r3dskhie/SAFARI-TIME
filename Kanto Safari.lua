@@ -57,10 +57,10 @@ nature2 = "Adamant"    --Pokemon Nature of 2nd SynchPoke
                                    --Leave blank at sleepmove/weakmove if you don't have atleast
 
 
-normalCatchOn = false        --Directly throw pokeballs on hunted pokemons
+normalCatchOn = true        --Directly throw pokeballs on hunted pokemons
 fswipeOn = false        --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
 sleepOn = false            --Switch to pokemon with sleep move, use sleep move until the hunted pokes status is SLEEPING then throw pokeballs
-advanceCatchOn = true        --Use fswipeOn and sleepOn to catch hunted pokes
+advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
 
 falseswiper = 4            --Index of pokemon with false swipe
 fswipeHP = 10            --Returns the health percent of the false swiper, then heal to PC
