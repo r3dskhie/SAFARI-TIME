@@ -289,11 +289,11 @@ end
 function natureSwap()
 	
 
-	if isMorning() and getPokemonNature(1) == synch3 and getPokemonNature(3) == synch1 and getPokemonNature(4) == synch2 then
+	if isMorning() and getPokemonNature(synchIndex1) == synch3 and getPokemonNature(synchIndex2) == synch1 and getPokemonNature(synchIndex3) == synch2 then
 		return swapPokemon(synchIndex1, synchIndex2)
-	elseif isMorning() and getPokemonNature(1) == synch3 and getPokemonNature(3) == synch2 and getPokemonNature(4) == synch1 then
+	elseif isMorning() and getPokemonNature(synchIndex1) == synch3 and getPokemonNature(synchIndex2) == synch2 and getPokemonNature(synchIndex3) == synch1 then
 		return swapPokemon(synchIndex1, synchIndex3)
-	elseif isMorning() and getPokemonNature(1) == synch1 then
+	elseif isMorning() and getPokemonNature(synchIndex1) == synch1 then
 
 		if huntMap1 == "GrassandSwamp" then
 			GsMap()
@@ -307,11 +307,11 @@ function natureSwap()
 
 	end
 
-	if isNoon() and getPokemonNature(1) == synch1 and getPokemonNature(3) == synch2 and getPokemonNature(4) == synch3 then
+	if isNoon() and getPokemonNature(synchIndex1) == synch1 and getPokemonNature(synchIndex2) == synch2 and getPokemonNature(synchIndex3) == synch3 then
 		return swapPokemon(synchIndex1, synchIndex2)
-	elseif isNoon() and getPokemonNature(1) == synch1 and getPokemonNature(3) == synch3 and getPokemonNature(4) == synch2 then
+	elseif isNoon() and getPokemonNature(synchIndex1) == synch1 and getPokemonNature(synchIndex2) == synch3 and getPokemonNature(synchIndex3) == synch2 then
 		return swapPokemon(synchIndex1, synchIndex3)
-	elseif isNoon() and getPokemonNature(1) == synch2 then
+	elseif isNoon() and getPokemonNature(synchIndex1) == synch2 then
 
 		if huntMap2 == "GrassandSwamp" then
 			GsMap()
@@ -324,12 +324,12 @@ function natureSwap()
 		end
 	end
 	
-	if isNight() and getPokemonNature(1) == synch2 and getPokemonNature(3) == synch3 and getPokemonNature(4) == synch1 then
+	if isNight() and getPokemonNature(synchIndex1) == synch2 and getPokemonNature(synchIndex2) == synch3 and getPokemonNature(synchIndex3) == synch1 then
 		return swapPokemon(synchIndex1, synchIndex2)
-	elseif isNight() and getPokemonNature(1) == synch2 and getPokemonNature(3) == synch1 and getPokemonNature(4) == synch3 then
+	elseif isNight() and getPokemonNature(synchIndex1) == synch2 and getPokemonNature(synchIndex2) == synch1 and getPokemonNature(synchIndex3) == synch3 then
 		return swapPokemon(synchIndex1, synchIndex3)
-	elseif isNight() and getPokemonNature(1) == synch3 then
-
+	elseif isNight() and getPokemonNature(synchIndex1) == synch3 then
+		
 		if huntMap3 == "GrassandSwamp" then
 			GsMap()
 		elseif huntMap3 == "Mountain" then
