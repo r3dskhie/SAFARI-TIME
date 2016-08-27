@@ -439,7 +439,7 @@ function onBattleAction()
             	log("-------- Starting to throw Pokeballs --------")
             		normal()  
 		end 
-	elseif getOpponentName() == "Beldum" then
+	elseif isWildBattle() and getOpponentName() == "Beldum" then
             	log("-------- Commencing Sleep Move --------")
             		sleep()
 	elseif singleCatch and getOpponentName() == toHunt then
