@@ -481,6 +481,8 @@ function onBattleAction()
             	log("-------- Starting to throw Pokeballs --------")
             		normal()  
 		end 
+	elseif (getOpponentName() == "Wobbuffet" ) then
+		return attack() or sendAnyPokemon()
 	elseif huntandFarm then
             return attack() or sendAnyPokemon() or run() or sendUsablePokemon()  
 	else
