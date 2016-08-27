@@ -582,9 +582,6 @@ function onBattleMessage(wild)
     elseif stringContains(wild, "You throw") then
         pokeballCounter = pokeballCounter + 1    
     
-    elseif stringContains(wild, "Pokedollar(s)") then
-                log("Info ~ Pokedollars earned: "..tostring(getMoney() - startingMoney).." (" ..tostring((getMoney() - startingMoney)/wildCounter).." average)")
-    
     elseif wild == "A Wild [FF9900]"..toHunt.."[-] Attacks!" then
         poke = poke + 1
   
