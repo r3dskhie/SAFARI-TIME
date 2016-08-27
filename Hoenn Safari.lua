@@ -1,6 +1,6 @@
 
 
-						 -- Copyright © 2016 redskhie
+						 -- Copyright Â© 2016 redskhie
 
 
 
@@ -50,7 +50,7 @@ huntMap3 = "Zone 2"		--Set/Change the Map Area of the 3rdPokemon    --OPTIONS: "
 
 
 synch3 = "Adamant"		--Set the Nature of the Synch Poke to Use at Night		
-synchIndex3 = 1 		--set the Index # of the Synch Poke to Use at Night, elseif the same leave
+synchIndex3 = 3 		--set the Index # of the Synch Poke to Use at Night, elseif the same leave
 
 
 
@@ -114,7 +114,7 @@ mountSwitch = true
 		--WARNING!!! DO NOT TOUCH THE CODES BELOW!!!
 
 
-					 -- Copyright © 2016 redskhie
+					 -- Copyright Â© 2016 redskhie
 			--List of Pokemon to Catch
 
 	local ZoneOneList = {"Pikachu", "Treecko", "Girafarig", "Natu", "Wobuffet", "Buneary"}
@@ -125,7 +125,7 @@ mountSwitch = true
 	local ZoneFiveSurfList = {"Mudkip", "Remoraid", "Marill", "Octillery"}
 	local ZoneSixList = {"Torchic", "Aipom", "Houndour", "Teddiursa", "Pineco", "Miltank"}
 		
-					 -- Copyright © 2016 redskhie
+					 -- Copyright Â© 2016 redskhie
 
 
 
