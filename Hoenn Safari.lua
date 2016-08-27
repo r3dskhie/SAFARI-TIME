@@ -439,6 +439,9 @@ function onBattleAction()
             	log("-------- Starting to throw Pokeballs --------")
             		normal()  
 		end 
+	elseif getOpponentName() == "Beldum" then
+            	log("-------- Commencing Sleep Move --------")
+            		sleep()
 	elseif singleCatch and getOpponentName() == toHunt then
 		if fswipeOn then
            	log("-------- Commencing False Swipe --------")
