@@ -5,23 +5,23 @@
 
 
 huntandFarm = false		--set to true if you want to kill all encountered pokes else false
-catchUncaught = true		--set to true if you want to catch uncaught pokes else false
+catchUncaught = false		--set to true if you want to catch uncaught pokes else false
 catchShiny = true		--set to true if you want to catch encountered shiny's else false
 
 
 						-- CATCH CONFIGURATION --CASE INSENSITIVE
 			--SINGLE CATCHING
 
-singleCatch = false		--Set to true if you want to catch only 1 Pokes and set multipleCatch to false
+singleCatch = true		--Set to true if you want to catch only 1 Pokes and set multipleCatch to false
 	
-toHunt = "Treecko"		--Set/Change the name of Pokemon you want to Catch     
-huntMap = "Zone 1"		--Set/Change the Map Area of the Pokemon    --OPTIONS: "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6"
+toHunt = "Torchic"		--Set/Change the name of Pokemon you want to Catch     
+huntMap = "Zone 6"		--Set/Change the Map Area of the Pokemon    --OPTIONS: "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6"
 
 
 
 			--MULTIPLE CATCHING
 
-multipleCatch = true		--Set to true if you want to catch multiple Pokes at Different Time and set singleCatch to false
+multipleCatch = false		--Set to true if you want to catch multiple Pokes at Different Time and set singleCatch to false
 				--NOTE: PLEASE PROPERLY ARRANGE THE TEAM ACCORDING TO YOUR INPUT CONFIG
 
 
@@ -37,19 +37,19 @@ synchIndex1 = 1			--Do not touch this line!
 
 			--DAY TIME CONFIG
 
-toHunt2 = "Riolu"			--Set/Change the name of Pokemon you want to Catch at Noon
-huntMap2 = "Zone 3"			--Set/Change the Map Area of the 2nd Pokemon    --OPTIONS: "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6"
+toHunt2 = "Torchic"			--Set/Change the name of Pokemon you want to Catch at Noon
+huntMap2 = "Zone 6"			--Set/Change the Map Area of the 2nd Pokemon    --OPTIONS: "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6"
 
 
-synch2 = "Jolly"		--Set the Nature of the Synch Poke to Use at Noon
+synch2 = "Adamant"		--Set the Nature of the Synch Poke to Use at Noon
 synchIndex2 = 3			--set the Index # of the Synch Poke to Use at Noon, elseif the same leave
 			--NIGHT TIME CONFIG
 
-toHunt3 = "Beldum"			--Set/Change the name of Pokemon you want to Catch at Night
-huntMap3 = "Zone 2"		--Set/Change the Map Area of the 3rdPokemon    --OPTIONS: "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6"
+toHunt3 = "Treecko"			--Set/Change the name of Pokemon you want to Catch at Night
+huntMap3 = "Zone 1"		--Set/Change the Map Area of the 3rdPokemon    --OPTIONS: "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6"
 
 
-synch3 = "Adamant"		--Set the Nature of the Synch Poke to Use at Night		
+synch3 = "Timid"		--Set the Nature of the Synch Poke to Use at Night		
 synchIndex3 = 3 		--set the Index # of the Synch Poke to Use at Night, elseif the same leave
 
 
@@ -82,13 +82,13 @@ fswipeOn = false        --Switch to pokemon with false swipe, use false swipe un
 sleepOn = false            --Switch to pokemon with sleep move, use sleep move until the hunted pokes status is SLEEPING then throw pokeballs
 advanceCatchOn = true        --Use fswipeOn and sleepOn to catch hunted pokes
 
-falseswiper = 6            --Index of pokemon with false swipe
+falseswiper = 4            --Index of pokemon with false swipe
 fswipeHP = 10            --Returns the health percent of the false swiper, then heal to PC
 weakmove = "False Swipe"    --False Swipe move
 
-sleeper = 6            --Index of pokemon with sleep move
+sleeper = 4            --Index of pokemon with sleep move
 sleeperHP = 10            --Returns the health percent of the false swiper, then heal to PC
-sleepmove = "Spore"        --Set/Change the name of the sleep move
+sleepmove = "Hypnosis"        --Set/Change the name of the sleep move
 
 
 
@@ -438,7 +438,7 @@ function onBattleAction()
         	elseif normalCatchOn then
             	log("-------- Starting to throw Pokeballs --------")
             		normal()  
-		end 
+		end
 	elseif isWildBattle() and getOpponentName() == "Beldum" then
             	log("-------- Commencing Sleep Move --------")
             		sleep()
@@ -484,10 +484,11 @@ function onBattleAction()
             	log("-------- Starting to throw Pokeballs --------")
             		normal()  
 		end 
-	elseif (getOpponentName() == "Wobbuffet" ) then
-		return attack() or sendAnyPokemon()
 	elseif huntandFarm then
-            return attack() or sendAnyPokemon() or run() or sendUsablePokemon()  
+            return attack() or sendAnyPokemon() or run() or sendUsablePokemon()
+	elseif (getOpponentName() == "Wobbuffet" ) then
+		
+		return attack() or sendAnyPokemon()
 	else
             return run() or sendUsablePokemon() or attack() or sendAnyPokemon()
         end
@@ -530,8 +531,7 @@ function sleep()
             return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
         elseif getOpponentStatus() == "SLEEP" or getOpponentStatus() == "PARALIZE" or getOpponentStatus() == "POISON" or getOpponentStatus() == "BURN" then
             return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
-        else
-            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or attack() or run()
+       
         end    
 end
 
