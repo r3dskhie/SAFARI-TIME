@@ -346,14 +346,14 @@ end
 
 
 function sleepPP()
-	if sleepmove ~= "" then 
+	if sleepmove ~= "" or sleepmove ~= " " then 
 		return getRemainingPowerPoints(sleeper, sleepmove) >= 1 
 	else 
 		return false
 	end
 end
 function fswipePP()
-	if weakmove ~= "" then 
+	if weakmove ~= "" or weakmove ~= " " then 
 		return getRemainingPowerPoints(falseswiper, weakmove) >= 1 
 	else 
 		return false 
