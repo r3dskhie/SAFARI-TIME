@@ -3,3 +3,5 @@
 08-26-2016  Hoenn Safari  ETA: Unknown
 08-27-2016  Johto Safari Script Swapping method fixed
 08-27-2016  Hoenn Safari Released
+09-17-2016 ~ Adjusted the script for getRemainingPP code
+09-17-2016 ~ Hoenn and Johto Safari Script Bug fixes
