@@ -469,6 +469,21 @@ function ball()
             end
 end
 
+function sleepPP()
+	if sleepmove ~= "" then 
+		return getRemainingPowerPoints(sleeper, sleepmove) >= 1 
+	else 
+		return false
+	end
+end
+function fswipePP()
+	if weakmove ~= "" then 
+		return getRemainingPowerPoints(falseswiper, weakmove) >= 1 
+	else 
+		return false 
+	end
+end
+
 function onPathAction()
     
     if not isMounted() and mountSwitch == true and hasItem(mount) and not isSurfing() and isOutside() then
@@ -489,8 +504,8 @@ function onPathAction()
 
         ball()
 
-    elseif isPokemonUsable(1) and isPokemonUsable(falseswiper) and getPokemonHealthPercent(falseswiper) > fswipeHP and getPokemonHealthPercent(sleeper) > sleeperHP and isPokemonUsable(sleeper) and getRemainingPowerPoints(sleeper, sleepmove) >= 1 and getRemainingPowerPoints(falseswiper, weakmove) >= 1 then
-    
+    elseif sleepPP() and fswipePP() and isPokemonUsable(1) and isPokemonUsable(synchIndex2) and isPokemonUsable(synchIndex3) and isPokemonUsable(falseswiper) and getPokemonHealthPercent(falseswiper) > fswipeHP and getPokemonHealthPercent(sleeper) > sleeperHP and isPokemonUsable(sleeper) then
+     
     if huntEeveeRhyhorn then
             
         area23()
