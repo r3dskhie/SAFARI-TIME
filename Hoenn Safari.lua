@@ -398,7 +398,7 @@ function onPathAction()
         log("---------------------------")
                 return useItem(mount)
 
-	elseif isPokemonUsable(1) and isPokemonUsable(synchIndex2) and isPokemonUsable(synchIndex3) and isPokemonUsable(falseswiper) and getPokemonHealthPercent(falseswiper) > fswipeHP and getPokemonHealthPercent(sleeper) > sleeperHP and isPokemonUsable(sleeper) and getRemainingPowerPoints(sleeper, sleepmove) >= 1 and getRemainingPowerPoints(falseswiper, weakmove) >= 1 then
+	elseif isPokemonUsable(1) and isPokemonUsable(synchIndex2) and isPokemonUsable(synchIndex3) and isPokemonUsable(falseswiper) and getPokemonHealthPercent(falseswiper) > fswipeHP and getPokemonHealthPercent(sleeper) > sleeperHP and isPokemonUsable(sleeper) and (sleepmove ~= "" and getRemainingPowerPoints(sleeper, sleepmove) >= 1) and (weakmove ~= "" and getRemainingPowerPoints(falseswiper, weakmove) >= 1) then
     
 		if singleCatch then
 			if huntMap == "Zone 1" then
