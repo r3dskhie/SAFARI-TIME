@@ -84,11 +84,11 @@ advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
 
 falseswiper = 2            --Index of pokemon with false swipe
 fswipeHP = 10            --Returns the health percent of the false swiper, then heal to PC
-weakmove = "False Swipe"    --False Swipe move
+weakmove = "False Swipe"    --False Swipe move --If you have no false swiper change to "None"
 
 sleeper = 2            --Index of pokemon with sleep move
 sleeperHP = 10            --Returns the health percent of the false swiper, then heal to PC
-sleepmove = "None"        --Set/Change the name of the sleep move
+sleepmove = "None"        --Set/Change the name of the sleep move --If you have no sleeper change to "None"
 
 
 
@@ -551,15 +551,15 @@ end
 function sleepPP()
 	if sleepmove ~= "None" then 
 		return getRemainingPowerPoints(sleeper, sleepmove) >= 1 
-	else 
-		return false
+	elseif sleepmove == "None" then
+		return isPokemonUsable(sleeper)
 	end
 end
 function fswipePP()
 	if weakmove ~= "None" then 
 		return getRemainingPowerPoints(falseswiper, weakmove) >= 1 
-	else 
-		return false 
+	elseif weakmove == "None" then
+		return isPokemonUsable(falseswiper)
 	end
 end
 
