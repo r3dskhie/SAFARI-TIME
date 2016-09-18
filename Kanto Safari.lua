@@ -64,11 +64,11 @@ advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
 
 falseswiper = 4            --Index of pokemon with false swipe
 fswipeHP = 10            --Returns the health percent of the false swiper, then heal to PC
-weakmove = ""    --False Swipe move
+weakmove = "False Swipe"    --False Swipe move --Change to "None" if you don't have
 
 sleeper = 4            --Index of pokemon with sleep move
 sleeperHP = 10            --Returns the health percent of the false swiper, then heal to PC
-sleepmove = ""        --Set/Change the name of the sleep move
+sleepmove = "None"        --Set/Change the name of the sleep move --Change to "None" if you don't have
 
 
 
@@ -470,20 +470,19 @@ function ball()
 end
 
 function sleepPP()
-	if sleepmove ~= "" or sleepmove ~= " " then 
+	if sleepmove ~= "None" then 
 		return getRemainingPowerPoints(sleeper, sleepmove) >= 1 
-	else 
-		return false
+	elseif sleepmove == "None" then
+		return isPokemonUsable(sleeper)
 	end
 end
 function fswipePP()
-	if weakmove ~= "" or weakmove ~= " " then 
+	if weakmove ~= "None" then 
 		return getRemainingPowerPoints(falseswiper, weakmove) >= 1 
-	else 
-		return false 
+	elseif weakmove == "None" then
+		return isPokemonUsable(falseswiper)
 	end
 end
-
 function onPathAction()
     
     if not isMounted() and mountSwitch == true and hasItem(mount) and not isSurfing() and isOutside() then
