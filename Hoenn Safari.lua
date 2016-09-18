@@ -12,7 +12,7 @@ catchShiny = true		--set to true if you want to catch encountered shiny's else f
 						-- CATCH CONFIGURATION --CASE INSENSITIVE
 			--SINGLE CATCHING
 
-singleCatch = true		--Set to true if you want to catch only 1 Pokes and set multipleCatch to false
+singleCatch = false		--Set to true if you want to catch only 1 Pokes and set multipleCatch to false
 	
 toHunt = "Torchic"		--Set/Change the name of Pokemon you want to Catch     
 huntMap = "Zone 6"		--Set/Change the Map Area of the Pokemon    --OPTIONS: "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6"
@@ -21,7 +21,7 @@ huntMap = "Zone 6"		--Set/Change the Map Area of the Pokemon    --OPTIONS: "Zone
 
 			--MULTIPLE CATCHING
 
-multipleCatch = false		--Set to true if you want to catch multiple Pokes at Different Time and set singleCatch to false
+multipleCatch = true		--Set to true if you want to catch multiple Pokes at Different Time and set singleCatch to false
 				--NOTE: PLEASE PROPERLY ARRANGE THE TEAM ACCORDING TO YOUR INPUT CONFIG
 
 
@@ -42,7 +42,7 @@ huntMap2 = "Zone 6"			--Set/Change the Map Area of the 2nd Pokemon    --OPTIONS:
 
 
 synch2 = "Adamant"		--Set the Nature of the Synch Poke to Use at Noon
-synchIndex2 = 3			--set the Index # of the Synch Poke to Use at Noon, elseif the same leave
+synchIndex2 = 1			--set the Index # of the Synch Poke to Use at Noon, elseif the same leave
 			--NIGHT TIME CONFIG
 
 toHunt3 = "Treecko"			--Set/Change the name of Pokemon you want to Catch at Night
@@ -78,17 +78,17 @@ fishItem = "Super Rod"		--Set/Change the Name of the Fishing Item you want to Us
 
 
 normalCatchOn = false        --Directly throw pokeballs on hunted pokemons
-fswipeOn = false        --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
+fswipeOn = true        --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
 sleepOn = false            --Switch to pokemon with sleep move, use sleep move until the hunted pokes status is SLEEPING then throw pokeballs
-advanceCatchOn = true        --Use fswipeOn and sleepOn to catch hunted pokes
+advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
 
-falseswiper = 4            --Index of pokemon with false swipe
+falseswiper = 2            --Index of pokemon with false swipe
 fswipeHP = 10            --Returns the health percent of the false swiper, then heal to PC
 weakmove = "False Swipe"    --False Swipe move
 
-sleeper = 4            --Index of pokemon with sleep move
+sleeper = 2            --Index of pokemon with sleep move
 sleeperHP = 10            --Returns the health percent of the false swiper, then heal to PC
-sleepmove = "Hypnosis"        --Set/Change the name of the sleep move
+sleepmove = "None"        --Set/Change the name of the sleep move
 
 
 
@@ -549,14 +549,14 @@ function natureSwap()
 end
 
 function sleepPP()
-	if sleepmove ~= "" or sleepmove ~= " " then 
+	if sleepmove ~= "None" then 
 		return getRemainingPowerPoints(sleeper, sleepmove) >= 1 
 	else 
 		return false
 	end
 end
 function fswipePP()
-	if weakmove ~= "" or weakmove ~= " " then 
+	if weakmove ~= "None" then 
 		return getRemainingPowerPoints(falseswiper, weakmove) >= 1 
 	else 
 		return false 
