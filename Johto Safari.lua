@@ -518,14 +518,14 @@ function sleepPP()
 	if sleepmove ~= "None" then 
 		return getRemainingPowerPoints(sleeper, sleepmove) >= 1 
 	elseif sleepmove == "None" then
-		return isPokemonUsable(sleeper)
+		isPokemonUsable(sleeper)
 	end
 end
 function fswipePP()
 	if weakmove ~= "None" then 
 		return getRemainingPowerPoints(falseswiper, weakmove) >= 1 
 	elseif weakmove == "None" then
-		return isPokemonUsable(falseswiper)
+		isPokemonUsable(falseswiper)
 	end
 end
 
