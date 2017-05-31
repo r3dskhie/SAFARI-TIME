@@ -37,5 +37,6 @@
 
 +Recoded the whole script
 
+**NOTE: THIS IS CURRENTLY ON TEST, FEEL FREE TO PM ME on PROSHINE: redskhie DISCORD: Redd for the found bug
 
 **CREDITS: MeltWS - Pathfinder**
