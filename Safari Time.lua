@@ -84,14 +84,14 @@ function onStart()
 		log("-------- MULTI-CATCHING STARTED --------")
         	log("-------- Script Information --------")
 		log("~~~HUNTED POKEMONS~~~")
-		log("-Morning Time: "..toHunt1.."- -Location: Hoenn Safari "..huntMap1.." -")
-		log("-Day Time: "..toHunt2.."- -Location: Hoenn Safari "..huntMap2.." -")
-		log("-Night Time: "..toHunt3.."- -Location: Hoenn Safari "..huntMap3.." -")
+		log("-Morning Time: "..toHunt1.."- -Location: Kanto Safari "..huntMap1.." -")
+		log("-Day Time: "..toHunt2.."- -Location: Kanto Safari "..huntMap2.." -")
+		log("-Night Time: "..toHunt3.."- -Location: Kanto Safari "..huntMap3.." -")
         	log("--------------------------------------")
 	elseif singleCatch then
 		log("-------- SINGLE-CATCHING STARTED --------")
        		log("-------- Script Information --------")
-		log("-We will hunt "..toHunt.." all Day!!!- -Location: Hoenn Safari "..huntMap.." -")
+		log("-We will hunt "..toHunt.." all Day!!!- -Location: Kanto Safari "..huntMap.." -")
         	log("--------------------------------------")
 	end
 	
