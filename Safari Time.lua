@@ -55,7 +55,8 @@ function onPathAction()
 			natureSwap()
 		end
 	else
-		useNearestPokecenter(map)
+		map = getMapName()
+		PathFinder.useNearestPokecenter(map)
 	end
 
     
