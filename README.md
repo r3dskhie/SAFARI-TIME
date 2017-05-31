@@ -31,6 +31,11 @@
 | 09-17-2016 | N/A | Adjusted the script for getRemainingPP code
 | 09-17-2016 | N/A | Hoenn and Johto Safari Script Bug fixes
 | 05-31-2017 | N/A | Added MeltWS Pathfinder
-| 05-31-2017 | N/A | Kanto Safari code recoded
+| 05-31-2017 | Version 2 | Kanto Safari code recoded
 
-CREDITS: MeltWS - Pathfinder
+**UPDATE PLAN**
+
++Recoded the whole script
+
+
+**CREDITS: MeltWS - Pathfinder**
