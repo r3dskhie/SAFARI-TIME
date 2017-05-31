@@ -5,3 +5,5 @@
 08-27-2016  Hoenn Safari Released
 09-17-2016 ~ Adjusted the script for getRemainingPP code
 09-17-2016 ~ Hoenn and Johto Safari Script Bug fixes
+05-31-2017 ~ Added MeltWS Pathfinder
+05-31-2017 ~ Kanto Safari code recoded
