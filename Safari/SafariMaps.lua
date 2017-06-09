@@ -1,3 +1,7 @@
+
+local PathFinder = require "Pathfinder/MoveToApp"
+local map = nil
+
 function AreaOne()
 	map = getMapName()
 	if map == "Safari Area 1" then
@@ -32,4 +36,9 @@ function Exclusive()
 	else
 		PathFinder.moveTo(map, "Safari Exclusive")
 	end
+end
+
+function HealPoke()
+	map = getMapName()
+	PathFinder.useNearestPokecenter(map)
 end
