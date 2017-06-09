@@ -5,8 +5,9 @@ dofile "Safari/NatureSwapExceptions.lua"
 dofile "config.lua"
 dofile "Safari/SafariMaps.lua"
 dofile "Safari/MoveExceptions.lua"
+dofile "Safari/PokeConditions.lua"
 
-	
+
 name = "Safari Time"
 author = "redskhie"
 description = [[This script will catch your desired Pokemons SAFARI WORLD]]
