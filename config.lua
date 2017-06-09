@@ -82,13 +82,9 @@ fswipeOn = true        --Switch to pokemon with false swipe, use false swipe unt
 sleepOn = false            --Switch to pokemon with sleep move, use sleep move until the hunted pokes status is SLEEPING then throw pokeballs
 advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
 
-falseswiper = 2            --Index of pokemon with false swipe
 fswipeHP = 10            --Returns the health percent of the false swiper, then heal to PC
-weakmove = "False Swipe"    --False Swipe move --If you have no false swiper change to "None"
 
-sleeper = 2            --Index of pokemon with sleep move
 sleeperHP = 10            --Returns the health percent of the false swiper, then heal to PC
-sleepmove = "None"        --Set/Change the name of the sleep move --If you have no sleeper change to "None"
 
 
 
