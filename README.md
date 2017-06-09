@@ -32,6 +32,7 @@
 | 09-17-2016 | N/A | Hoenn and Johto Safari Script Bug fixes
 | 05-31-2017 | N/A | Added MeltWS Pathfinder
 | 05-31-2017 | Version 2 | Kanto Safari code recoded
+| 06-09-2017 | Version 2 | Added some codes
 
 **UPDATE PLAN**
 
