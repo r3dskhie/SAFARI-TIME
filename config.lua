@@ -32,7 +32,7 @@ huntMap1 = "Area 3"		--Set/Change the Map Area of the 1st Pokemon    --OPTIONS: 
 
 
 
-synch1 = "Timid"			--Set the Nature of the Synch Poke to Use at Morning
+synch1 = "Adamant"			--Set the Nature of the Synch Poke to Use at Morning
 synchIndex1 = 1			--Do not touch this line!
 
 			--DAY TIME CONFIG
@@ -41,7 +41,7 @@ toHunt2 = "Eevee"			--Set/Change the name of Pokemon you want to Catch at Noon
 huntMap2 = "Area 3"			--Set/Change the Map Area of the 2nd Pokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", " ", " "
 
 
-synch2 = "Timid"		--Set the Nature of the Synch Poke to Use at Noon
+synch2 = "Adamant"		--Set the Nature of the Synch Poke to Use at Noon
 synchIndex2 = 1			--set the Index # of the Synch Poke to Use at Noon, elseif the same leave
 			--NIGHT TIME CONFIG
 
@@ -49,7 +49,7 @@ toHunt3 = "Chansey"			--Set/Change the name of Pokemon you want to Catch at Nigh
 huntMap3 = "Area 2"		--Set/Change the Map Area of the 3rdPokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", " ", " "
 
 
-synch3 = "Bold"		--Set the Nature of the Synch Poke to Use at Night		
+synch3 = "Adamant"		--Set the Nature of the Synch Poke to Use at Night		
 synchIndex3 = 3 		--set the Index # of the Synch Poke to Use at Night, elseif the same leave
 
 
