@@ -1,8 +1,8 @@
 
 							 -- Copyright © 2016 redskhie
-						 
+
+dofile "config.lua"							 
 dofile "Safari/NatureSwapExceptions.lua"
-dofile "config.lua"
 dofile "Safari/SafariMaps.lua"
 dofile "Safari/MoveExceptions.lua"
 dofile "Safari/PokeConditions.lua"
@@ -12,11 +12,6 @@ name = "Safari Time"
 author = "redskhie"
 description = [[This script will catch your desired Pokemons SAFARI WORLD]]
 
--- First you need to get the module loaded in your script :
-	local PathFinder = require "Pathfinder/MoveToApp"  -- loading the module MoveToApp and getting the functions it sends back in a table: PathFinder.
--- Now to use PathFinder functions you can write PathFinder.functionName().
--- You can require MoveToApp from anywhere above in the hierarchie.
-	local map = nil -- we want to only call getMapName() on time per onPathAction() so we use this variable
 
 
 	local AreaOneList = {"Pinsir", "Kangaskhan", "Scyther"}
@@ -34,14 +29,13 @@ function onDialogMessage(pokecenter)
 end
 
 function onPathAction()
-    
+
     if not isMounted() and mountSwitch == true and hasItem(mount) and not isSurfing() and isOutside() then
         log("---------------------------")
         log("~~~ Riding on my pet!!! ~~~")
         log("---------------------------")
                 return useItem(mount)
-    elseif sleepPP() and fswipePP() and isPokemonUsable(1) and isPokemonUsable(synchIndex2) and isPokemonUsable(synchIndex3) and isPokemonUsable(falseswiper) and getPokemonHealthPercent(falseswiper) > fswipeHP and getPokemonHealthPercent(sleeper) > sleeperHP and isPokemonUsable(sleeper) then
-    
+    elseif isPokemonUsable(1) then
 		if singleCatch then
 			if huntMap == "Area 1" then
 				AreaOne()
@@ -56,8 +50,7 @@ function onPathAction()
 			natureSwap()
 		end
 	else
-		map = getMapName()
-		PathFinder.useNearestPokecenter(map)
+		HealPoke()
 	end
 
     
