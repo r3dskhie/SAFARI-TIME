@@ -43,6 +43,6 @@ elseif sleepOnOn == true then
 end
 
 for _,sleepMoves in pairs(sleepMoves) do
-  sleeper = sleepMoves
+  sleeMoves = sleepMoves
     break
 end
