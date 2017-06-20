@@ -14,7 +14,7 @@ catchShiny = true		--set to true if you want to catch encountered shiny's else f
 singleCatch = false		--Set to true if you want to catch only 1 Pokes and set multipleCatch to false
 	
 toHunt = "Eevee"		--Set/Change the name of Pokemon you want to Catch     
-huntMap = "Area 3"		--Set/Change the Map Area of the Pokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", " ", " "
+huntMap = "Area 3"		--Set/Change the Map Area of the Pokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6", "GrassandSwamp", "Mountain", "Snow", "Wet"
 
 
 
@@ -28,7 +28,7 @@ multipleCatch = true		--Set to true if you want to catch multiple Pokes at Diffe
 			--MORNING TIME CONFIG
 
 toHunt1 = "Eevee"		--Set/Change the name of Pokemon you want to Catch
-huntMap1 = "Area 3"		--Set/Change the Map Area of the 1st Pokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", " ", " "
+huntMap1 = "Area 3"		--Set/Change the Map Area of the 1st Pokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6", "GrassandSwamp", "Mountain", "Snow", "Wet"
 
 
 
@@ -38,7 +38,7 @@ synchIndex1 = 1			--Do not touch this line!
 			--DAY TIME CONFIG
 
 toHunt2 = "Eevee"			--Set/Change the name of Pokemon you want to Catch at Noon
-huntMap2 = "Area 3"			--Set/Change the Map Area of the 2nd Pokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", " ", " "
+huntMap2 = "Area 3"			--Set/Change the Map Area of the 2nd Pokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6", "GrassandSwamp", "Mountain", "Snow", "Wet"
 
 
 synch2 = "Adamant"		--Set the Nature of the Synch Poke to Use at Noon
@@ -46,7 +46,7 @@ synchIndex2 = 1			--set the Index # of the Synch Poke to Use at Noon, elseif the
 			--NIGHT TIME CONFIG
 
 toHunt3 = "Chansey"			--Set/Change the name of Pokemon you want to Catch at Night
-huntMap3 = "Area 2"		--Set/Change the Map Area of the 3rdPokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", " ", " "
+huntMap3 = "Area 2"		--Set/Change the Map Area of the 3rdPokemon    --OPTIONS: "Area 1", "Area 2", "Area 3", "Exclusive", "Zone 1", "Zone 2", "Zone 3", "Zone 4", "Zone 5", "Zone 6", "GrassandSwamp", "Mountain", "Snow", "Wet"
 
 
 synch3 = "Adamant"		--Set the Nature of the Synch Poke to Use at Night		
