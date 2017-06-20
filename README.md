@@ -4,9 +4,9 @@
 
 **FEATURES:**
 
-- [x] Kanto Safari - 90% done - On Debugging
-- [ ] Johto safari - 0% done - Recoding whole script
-- [ ] Johto Region - 0% done - Recoding whole script
+- [x] Kanto Safari - 95% done - On Debugging
+- [x] Johto safari - 95% done - On Debugging
+- [x] Hoenn Region - 95% done - On Debugging
 - [ ] Hunt and Farm Money - 0% done
 
 
@@ -33,6 +33,9 @@
 | 05-31-2017 | N/A | Added MeltWS Pathfinder
 | 05-31-2017 | Version 2 | Kanto Safari code recoded
 | 06-09-2017 | Version 2 | Added some codes
+| 06-20-2017 | Version 2.3 | Johto and Hoenn Safari Added
+
+
 
 **UPDATE PLAN**
 
