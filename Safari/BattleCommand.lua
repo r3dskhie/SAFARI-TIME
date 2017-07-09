@@ -1,5 +1,5 @@
 function onBattleAction()
-
+	checkSleepMoves()
 	if isWildBattle() and ((catchShiny and isOpponentShiny()) or (catchUncaught and not isAlreadyCaught())) then
 		startBattle()
 	elseif isWildBattle() and getOpponentName() == "Beldum" then
