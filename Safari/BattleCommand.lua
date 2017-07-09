@@ -1,64 +1,24 @@
 function onBattleAction()
 
 	if isWildBattle() and ((catchShiny and isOpponentShiny()) or (catchUncaught and not isAlreadyCaught())) then
-		if fswipeOn then
-           	log("-------- Commencing False Swipe --------")
-            		fswipe()
-        	elseif sleepOn then
-            	log("-------- Commencing Sleep Move --------")
-            		sleep()
-        	elseif advanceCatchOn then
-            	log("-------- Commencing False Swipe with Sleep Move --------")
-            		advanceCatch()
-        	elseif normalCatchOn then
-            	log("-------- Starting to throw Pokeballs --------")
-            		normal()  
-		end
+		startBattle()
 	elseif isWildBattle() and getOpponentName() == "Beldum" then
             	log("-------- Commencing Sleep Move --------")
-            		sleep()
+		if getActivePokemonNumber() == 1 then
+            return sendPokemon(sleeper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
+        elseif ( getActivePokemonNumber() == sleeper ) and ( getOpponentStatus() ~= "SLEEP" and getOpponentStatus() ~= "PARALIZE" and getOpponentStatus() ~= "POISON" and getOpponentStatus() ~= "BURN" ) then
+            return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
+        elseif getOpponentStatus() == "SLEEP" or getOpponentStatus() == "PARALIZE" or getOpponentStatus() == "POISON" or getOpponentStatus() == "BURN" then
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
+        else
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
+        end
 	elseif singleCatch and getOpponentName() == toHunt then
-		if fswipeOn then
-           	log("-------- Commencing False Swipe --------")
-            		fswipe()
-        	elseif sleepOn then
-            	log("-------- Commencing Sleep Move --------")
-            		sleep()
-        	elseif advanceCatchOn then
-            	log("-------- Commencing False Swipe with Sleep Move --------")
-            		advanceCatch()
-        	elseif normalCatchOn then
-            	log("-------- Starting to throw Pokeballs --------")
-            		normal()  
-		end 
+		startBattle()
 	elseif multipleCatch and (getOpponentName() == toHunt1 or getOpponentName() == toHunt2 or getOpponentName() == toHunt3) then
-		if fswipeOn then
-           	log("-------- Commencing False Swipe --------")
-            		fswipe()
-        	elseif sleepOn then
-            	log("-------- Commencing Sleep Move --------")
-            		sleep()
-        	elseif advanceCatchOn then
-            	log("-------- Commencing False Swipe with Sleep Move --------")
-            		advanceCatch()
-        	elseif normalCatchOn then
-            	log("-------- Starting to throw Pokeballs --------")
-            		normal()  
-		end
+		startBattle()
 	elseif Add and (getOpponentName() == addHunt1 or getOpponentName() == addHunt2 or getOpponentName() == addHunt3) then
-		if fswipeOn then
-           	log("-------- Commencing False Swipe --------")
-            		fswipe()
-        	elseif sleepOn then
-            	log("-------- Commencing Sleep Move --------")
-            		sleep()
-        	elseif advanceCatchOn then
-            	log("-------- Commencing False Swipe with Sleep Move --------")
-            		advanceCatch()
-        	elseif normalCatchOn then
-            	log("-------- Starting to throw Pokeballs --------")
-            		normal()  
-		end 
+		startBattle()
 	elseif huntandFarm then
             return attack() or sendAnyPokemon() or run() or sendUsablePokemon()
 	elseif (getOpponentName() == "Wobbuffet" ) then
@@ -70,46 +30,50 @@ function onBattleAction()
 	
 end
 
-function normal()
-    return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")  or sendAnyPokemon() or attack() or run()
-end
-
-function advanceCatch()
+function startBattle()
+	if falseswiper == nil and sleeper == nil then
+		log("-------- No Falseswiper and No Sleeper --------")
+		log("-------- Starting to throw Pokeballs --------")
+		return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")  or sendAnyPokemon() or attack() or run()
+	elseif falseswiper != nil and sleeper == nil then
+		log("-------- Commencing False Swipe --------")
         if getActivePokemonNumber() == 1 then
+            return sendPokemon(falseswiper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
+        elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealthPercent() > 10 ) then
+            return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
+        elseif getOpponentHealthPercent() <= 10 then
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3)  or sendAnyPokemon() or attack() or run()
+		else
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
+        end
+	elseif sleeper != nil and falseswiper == nil then
+		log("-------- Commencing Sleep Move --------")
+		if getActivePokemonNumber() == 1 then
+            return sendPokemon(sleeper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
+        elseif ( getActivePokemonNumber() == sleeper ) and ( getOpponentStatus() ~= "SLEEP" and getOpponentStatus() ~= "PARALIZE" and getOpponentStatus() ~= "POISON" and getOpponentStatus() ~= "BURN" ) then
+            return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
+        elseif getOpponentStatus() == "SLEEP" or getOpponentStatus() == "PARALIZE" or getOpponentStatus() == "POISON" or getOpponentStatus() == "BURN" then
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
+        else
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
+        end
+	elseif falseswiper != nil and sleeper != nil then
+		log("-------- Commencing False Swipe with Sleep Move --------")
+		if getActivePokemonNumber() == 1 then
             return sendPokemon(falseswiper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealth() > 1 ) then
-            return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
+            return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == sleeper ) and ( getOpponentStatus() ~= "SLEEP" and getOpponentStatus() ~= "PARALIZE" and getOpponentStatus() ~= "POISON" and getOpponentStatus() ~= "BURN" ) and ( getOpponentHealth() == 1 ) then
             return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealth() == 1 ) then
             return sendPokemon(sleeper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
         elseif getOpponentStatus() == "SLEEP" or getOpponentStatus() == "PARALIZE" or getOpponentStatus() == "POISON" or getOpponentStatus() == "BURN" then
-            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or attack() or run()
+            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
         else
-                return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or attack() or run()
+                return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or attack() or run()
         end
+	end
 end
-
-function fswipe()
-        if getActivePokemonNumber() == 1 then
-            return sendPokemon(falseswiper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
-        elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealth() > 1 ) then
-            return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
-        elseif getOpponentHealth() == 1 then
-            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball")  or sendAnyPokemon() or attack() or run()
-        end
-end
-function sleep()
-        if getActivePokemonNumber() == 1 then
-            return sendPokemon(sleeper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or run()
-        elseif ( getActivePokemonNumber() == sleeper ) and ( getOpponentStatus() ~= "SLEEP" and getOpponentStatus() ~= "PARALIZE" and getOpponentStatus() ~= "POISON" and getOpponentStatus() ~= "BURN" ) then
-            return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
-        elseif getOpponentStatus() == "SLEEP" or getOpponentStatus() == "PARALIZE" or getOpponentStatus() == "POISON" or getOpponentStatus() == "BURN" then
-            return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
-       
-        end    
-end
-
 function onBattleMessage(wild)
     
     if stringContains(wild, "A Wild SHINY ") then
