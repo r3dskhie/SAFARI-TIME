@@ -9,7 +9,7 @@ dofile "Safari/PokeConditions.lua"
 dofile "Safari/LogMapsExcep.lua"
 
 
-name = "Safari Time v2.3"
+name = "Safari Time v2.4"
 author = "redskhie"
 description = [[This script will catch your desired Pokemons SAFARI WORLD]]
 
