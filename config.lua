@@ -77,10 +77,6 @@ fishItem = "Super Rod"		--Set/Change the Name of the Fishing Item you want to Us
                                    --Leave blank at sleepmove/weakmove if you don't have atleast
 
 
-normalCatchOn = false        --Directly throw pokeballs on hunted pokemons
-fswipeOn = true        --Switch to pokemon with false swipe, use false swipe until the hunted pokes hp is reach to 1 then throw pokeballs
-sleepOn = false            --Switch to pokemon with sleep move, use sleep move until the hunted pokes status is SLEEPING then throw pokeballs
-advanceCatchOn = false        --Use fswipeOn and sleepOn to catch hunted pokes
 
 fswipeHP = 10            --Returns the health percent of the false swiper, then heal to PC
 
