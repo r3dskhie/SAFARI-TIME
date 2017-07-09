@@ -9,12 +9,17 @@ for pokemonId=1,getTeamSize(),1 do
     end
 end
 end
+function checkSleepMoves()
+for _,sleepMoves in pairs(sleepMoves) do
+
 if sleeper == nil then
-for pokemonId=1,getTeamSize(),1 do
-    for pokemonId=1, getTeamSize(), 1 do
-        if hasMove(pokemonId, "Sleep Powder", "Hypnosis", "Spore", "Yawn", "Sing") then
-            sleeper = pokemonId
+	for sleeppokemonId=1,getTeamSize(),1 do
+    for sleeppokemonId=1, getTeamSize(), 1 do
+        if hasMove(sleeppokemonId, sleepMoves) then
+            sleeper = sleeppokemonId
         end
     end
+end
+end
 end
 end
