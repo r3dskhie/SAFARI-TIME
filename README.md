@@ -34,6 +34,7 @@
 | 05-31-2017 | Version 2 | Kanto Safari code recoded
 | 06-09-2017 | Version 2 | Added some codes
 | 06-20-2017 | Version 2.3 | Johto and Hoenn Safari Added
+| 07-09-2017 | Version 2.3 | Automatically detect team with False Swipe and Sleep Moves
 
 
 
