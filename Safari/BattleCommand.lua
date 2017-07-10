@@ -51,7 +51,7 @@ function startBattle()
 		if getActivePokemonNumber() == 1 then
             return sendPokemon(sleeper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == sleeper ) and ( getOpponentStatus() ~= "SLEEP" and getOpponentStatus() ~= "PARALIZE" and getOpponentStatus() ~= "POISON" and getOpponentStatus() ~= "BURN" ) then
-            return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
+            return doSleepMoves() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         elseif getOpponentStatus() == "SLEEP" or getOpponentStatus() == "PARALIZE" or getOpponentStatus() == "POISON" or getOpponentStatus() == "BURN" then
             return useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         else
@@ -64,7 +64,7 @@ function startBattle()
         elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealth() > 1 ) then
             return weakAttack() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendPokemon(3) or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == sleeper ) and ( getOpponentStatus() ~= "SLEEP" and getOpponentStatus() ~= "PARALIZE" and getOpponentStatus() ~= "POISON" and getOpponentStatus() ~= "BURN" ) and ( getOpponentHealth() == 1 ) then
-            return useMove(sleepmove) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
+            return doSleepMoves() or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
         elseif ( getActivePokemonNumber() == falseswiper ) and ( getOpponentHealth() == 1 ) then
             return sendPokemon(sleeper) or useItem("Pokeball") or useItem("Great Ball") or useItem("Ultra Ball") or sendAnyPokemon() or run()
         elseif getOpponentStatus() == "SLEEP" or getOpponentStatus() == "PARALIZE" or getOpponentStatus() == "POISON" or getOpponentStatus() == "BURN" then
